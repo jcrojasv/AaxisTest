@@ -48,7 +48,7 @@ This guide provides step-by-step instructions on how to deploy the AaxisTest app
    ```bash
    docker-compose exec app php bin/console app:user-create <username> <password> <roles>
    ``````
-- ** Available Roles: **
+- **Available Roles:**
 > - ROLE_ADMIN
 > - ROLE_USER
 
