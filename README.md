@@ -36,3 +36,24 @@ This guide provides step-by-step instructions on how to deploy the AaxisTest app
   ```
   * Open your web browser and navigate to http://localhost:8000.
   * The AaxisTest application should be up and running!
+
+
+### How to consume the API with POSTMAN ###
+1. **Import the collecction located in the root path of the repository:**
+   - Use the file named "RESTful API AaxisTest.postman_collection.json"
+> Make sure to follow the steps in the README file for detailed instructions on creating users and listing them.
+
+### How to Create Users ###
+- **Execute the following command to create a user:**
+   ```bash
+   docker-compose exec app php bin/console app:user-create <username> <password> <roles>
+   ``````
+- ** Available Roles: **
+> - ROLE_ADMIN
+> - ROLE_USER
+
+### How to List Users ###
+- **Execute the following command to list users:**
+   ```bash
+   docker-compose exec app php bin/console app:user-list
+   ``````
