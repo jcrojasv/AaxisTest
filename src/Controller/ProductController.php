@@ -8,10 +8,13 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Security\Http\Attribute\IsGranted;
 use Symfony\Component\Serializer\SerializerInterface;
 use Symfony\Component\Serializer\Normalizer\AbstractNormalizer;
 use Symfony\Component\Validator\Validator\ValidatorInterface;
 
+#[IsGranted('ROLE_ADMIN')]
+#[IsGranted('ROLE_USER')]
 class ProductController extends AbstractController
 {
     #[Route('/product', name: 'app_product_index', methods: ['GET'])]
