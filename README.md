@@ -38,6 +38,20 @@ This guide provides step-by-step instructions on how to deploy the AaxisTest app
   * The AaxisTest application should be up and running!
 
 
+### How to run unit tests ###
+1. **Create the test database:**
+  ```bash
+  docker-compose exec app php bin/console doctrine:database:create --env=test
+  ```
+2. **Run migrations:**
+  ```bash
+  docker-compose exec app php bin/console doctrine:migrations:migrate --env=test
+  ```
+3. **Execute tests:**
+  ```bash
+  docker-compose exec app php bin/phpunit
+  ```
+
 ### How to consume the API with POSTMAN ###
 1. **Import the collecction located in the root path of the repository:**
    - Use the file named "RESTful API AaxisTest.postman_collection.json"
